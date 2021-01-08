@@ -56,6 +56,6 @@ function writeToDocument(url) {
             tableRows.push(`<tr>${dataRow}</tr>`);
         });
 
-        el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`;
+        el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g, "");
     });
 }
